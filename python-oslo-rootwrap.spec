@@ -24,7 +24,7 @@ but called as a separate process through the `oslo-rootwrap` command:
 `sudo oslo-rootwrap ROOTWRAP_CONFIG COMMAND_LINE`
 
 %prep
-%setup -q -n %{pypi_name}-%{version}
+%setup -q -n oslo.rootwrap-%{upstream_version}
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
 
@@ -42,7 +42,6 @@ rm -rf %{pypi_name}.egg-info
 
 %files
 %doc README.rst LICENSE
-%{_bindir}/oslo-rootwrap
 %dir %{python_sitelib}/oslo
 %{python_sitelib}/oslo/rootwrap
 %{python_sitelib}/oslo.rootwrap-%{version}*
