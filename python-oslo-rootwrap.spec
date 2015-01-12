@@ -45,6 +45,7 @@ rm -rf %{pypi_name}.egg-info
 %files
 %doc README.rst LICENSE
 %{python_sitelib}/oslo
+%{python_sitelib}/oslo_rootwrap
 %{python_sitelib}/*.egg-info
 %{python_sitelib}/*-nspkg.pth
 
