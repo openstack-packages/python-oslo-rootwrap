@@ -3,7 +3,7 @@
 
 Name:           python-oslo-rootwrap
 Version:        XXX
-Release:        XXX{?dist}
+Release:        XXX
 Summary:        Oslo Rootwrap
 
 License:        ASL 2.0
@@ -27,11 +27,6 @@ but called as a separate process through the `oslo-rootwrap` command:
 %prep
 %setup -q -n %{pypi_name}-%{upstream_version}
 
-# Remove bundled egg-info
-rm -rf %{pypi_name}.egg-info
-
-
-
 %build
 %{__python} setup.py build
 
@@ -48,16 +43,7 @@ rm -rf %{pypi_name}.egg-info
 %{python_sitelib}/oslo_rootwrap
 %{python_sitelib}/*.egg-info
 %{python_sitelib}/*-nspkg.pth
+%{_bindir}/oslo-rootwrap
+%{_bindir}/oslo-rootwrap-daemon
 
 %changelog
-* Sun Sep 21 2014 Alan Pevec <apevec@redhat.com> - 1.3.0.0-1
-- Final release 1.3.0
-
-* Fri Sep 12 2014 Alan Pevec <apevec@redhat.com> - 1.3.0.0-0.1.a2
-- Update to 1.3.0.0a2 milestone
-
-* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.0.0-2
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
-
-* Mon Jan 20 2014 Matthias Runge <mrunge@redhat.com> - 1.0.0-1
-- Initial package.
