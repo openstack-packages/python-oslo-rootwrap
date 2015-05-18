@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_cc3dde2e",
+        "filename": "python-oslo-rootwrap.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1002601
+      },
+      "writtenOn": "2015-05-18T15:49:27Z",
+      "side": 1,
+      "message": "Please use versioned python macros (the same for sitelib)",
+      "revId": "0e9049ef306fc636d6bab2c3176751c1563d8932",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
