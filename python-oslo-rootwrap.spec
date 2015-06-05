@@ -39,10 +39,8 @@ but called as a separate process through the `oslo-rootwrap` command:
 
 %files
 %doc README.rst LICENSE
-%{python2_sitelib}/oslo
 %{python2_sitelib}/oslo_rootwrap
 %{python2_sitelib}/*.egg-info
-%{python2_sitelib}/*-nspkg.pth
 %{_bindir}/oslo-rootwrap
 %{_bindir}/oslo-rootwrap-daemon
 
