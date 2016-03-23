@@ -5,14 +5,16 @@
 %global pypi_name oslo.rootwrap
 %global pkg_name oslo-rootwrap
 
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+
 Name:           python-oslo-rootwrap
-Version:        XXX
-Release:        XXX
+Version:        4.1.0
+Release:        1%{?dist}
 Summary:        Oslo Rootwrap
 
 License:        ASL 2.0
 URL:            https://launchpad.net/oslo
-Source0:        https://pypi.python.org/packages/source/o/%{pypi_name}/%{pypi_name}-1.3.0.tar.gz
+Source0:        https://pypi.python.org/packages/source/o/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 %package -n python2-%{pkg_name}
@@ -186,3 +188,6 @@ PYTHONPATH=. %{__python3} setup.py test ||
 %endif
 
 %changelog
+* Wed Mar 23 2016 Haikel Guemar <hguemar@fedoraproject.org> 4.1.0-
+- Update to 4.1.0
+
